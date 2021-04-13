@@ -1,0 +1,63 @@
+// Table of Contents
+// Foundation Settings
+//
+// a. Base
+// b. Color
+// c. Typography
+// d. Media Query Ranges
+// e. Others
+
+// a. Base
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$html-font-size: 16px;
+
+$container_xxlarge: 1640px;
+$container_xlarge: 1320px;
+$container_large: 960px;
+$container_medium: 720px;
+$container_small: 540px;
+$container_xsmall: 100%;
+
+// b. Color
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Default colors
+
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+// c. Typography
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$primary-font: helvetica, sans-serif;
+
+// d. Media Query Ranges
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+$breakpoint_mobile: 480px;
+$breakpoint_tablet-portrait: 767px;
+$breakpoint_tablet-landscape: 1024px;
+$breakpoint_laptop:  1280px;
+$breakpoint_desktop: 1281px;
+
+// e. Others
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+

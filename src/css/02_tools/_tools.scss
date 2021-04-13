@@ -1,0 +1,94 @@
+// Box-size
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin box-size($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+// Flex
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin flex($direction: row, $break: nowrap, $align-width: center, $align-height: center) {
+  display: flex;
+  flex-flow: $direction $break;
+  justify-content: $align-width;
+  align-items: $align-height;
+}
+
+// Rem value
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+// Position Center
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin center($position) {
+  position: absolute;
+  
+  @if $position == 'vertical' {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  @else if $position == 'horizontal' {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+  }
+  @else if $position == 'both' {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+// Breakpoint
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@mixin screen($size, $type: max, $pixels: $breakpoint_mobile) {
+  @if $size == 'mobile' {
+    @media screen and ($type + -width: $breakpoint_mobile) {
+        @content;
+    }
+  }
+  @else if $size == 'tablet-portrait' {
+    @media screen and ($type + -width: $breakpoint_tablet-portrait) and (orientation: portrait) {
+        @content;
+    }
+  }
+  @else if $size == 'tablet-landscape' {
+    @media screen and ($type + -width: $breakpoint_tablet-landscape) and (orientation: landscape) {
+        @content;
+    }
+  }
+  @else if $size == 'laptop' {
+    @media screen and ($type + -width: $breakpoint_laptop) {
+        @content;
+    }
+  }
+  @else if $size == 'desktop' {
+    @media screen and (min-width: $breakpoint_desktop) {
+        @content;
+    }
+  }
+  @else if $size == 'custom' {
+    @media screen and ($type + -width: $pixels + px) {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
