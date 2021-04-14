@@ -1,13 +1,6 @@
 ---
 type: about
-title: spa dahlia
+title: Bemon's Artelier
 id: 1
 ---
-hello
-
-This is me
-
-Oliver
-
-`<strong>shiiit</strong>`
-
+henlo im benmon OwO
