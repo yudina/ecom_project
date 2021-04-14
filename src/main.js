@@ -27,7 +27,7 @@ export default function (Vue, { head }) {
     src: 'https://cdn.snipcart.com/themes/v3.0.31/default/snipcart.js',
     body: true,
     id: 'snipcart',
-    'data-api-key': 'OTYyNTZkNzEtZWE1Ni00ZmNlLWFlYjYtZDU3NzNmNGRhNjRkNjM3NTEwMzEwNDk5MDY3OTUy',
+    'data-api-key': 'MWY1ZmEwYzAtNmU1Ny00YWY3LTg1NzctNGI1NDAxMjU4NGExNjM3NTM5NTM1MDQ2NDEyOTg2',
   })
 
 }
